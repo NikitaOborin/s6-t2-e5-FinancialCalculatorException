@@ -36,10 +36,7 @@ public class FinancialCalculatorException {
                 }
             } catch (InputException exception) {
                 // сгенерируйте вывод формата "Ошибка ввода: " + информация об исключении
-                System.out.println("Ошибка ввода: ");
-                for (StackTraceElement stack : exception.getStackTrace()) {
-                    System.out.printf("%s.%s(%s:%d) %n", stack.getClassName(), stack.getMethodName(), stack.getFileName(), stack.getLineNumber());
-                }
+                System.out.println("Ошибка ввода: " + exception.getMessage());
             }
         }
         // сгенерируйте исключение LimitException с сообщением "Превышен лимит ошибок ввода"
@@ -65,10 +62,8 @@ public class FinancialCalculatorException {
                 }
             } catch (InputException exception) {
                 // сгенерируйте вывод формата "Ошибка ввода: " + информация об исключении
-                System.out.println("Ошибка ввода: ");
-                for (StackTraceElement stack : exception.getStackTrace()) {
-                    System.out.printf("%s.%s(%s:%d) %n", stack.getClassName(), stack.getMethodName(), stack.getFileName(), stack.getLineNumber());
-                }
+                System.out.println("Ошибка ввода: " + exception.getMessage());
+
             }
         }
         // сгенерируйте исключение LimitException с сообщением "Превышен лимит ошибок ввода"
